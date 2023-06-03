@@ -96,9 +96,8 @@ elif choice == 'Sử dụng mô hình để dự báo':
         VPCT = st.number_input('Insert VPCT')
         LS = st.number_input('Insert LS')
         lines=pd.DataFrame({'giatri':git,'DT':DT,'TN':TN,'SPT':SPT,'GTC':GTC,'GD':GD,'TCH':TCH,'GT':GT,'DV':DV,'VPCT':VPCT,'LS':LS})
-        if lines!="":
-            st.dataframe(lines)
-            flag = True
+        st.dataframe(lines)
+        flag = True
     
     if flag:
         st.write("Content:")
