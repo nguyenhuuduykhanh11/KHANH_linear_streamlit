@@ -57,7 +57,7 @@ elif choice == 'Xây dựng mô hình':
     st.dataframe(df.tail(3))  
     
     st.write("##### 2. Trực quan hóa dữ liệu")
-    u=st.text_input()
+    u=st.text_input('Nhập biến muốn vẽ vào đây')
     fig1 = sns.regplot(data=df, x=u, y='giatri')    
     st.pyplot(fig1.figure)
 
