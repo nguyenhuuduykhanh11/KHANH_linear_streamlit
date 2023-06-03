@@ -95,9 +95,8 @@ elif choice == 'Sử dụng mô hình để dự báo':
         DV = st.number_input('Insert DV')
         VPCT = st.number_input('Insert VPCT')
         LS = st.number_input('Insert LS')
-        lines=np.array([git,DT,TN,SPT,GTC,GD,TCH,GT,DV,VPCT,LS])
-        lines=np.transpose(lines)
-        lines=pd.DataFrame(lines,columns=['giatri','DT','TN','SPT','GTC','GD','TCH','GT','DV','VPCT','LS'])
+        lines={'giatri':[git],'DT':[DT],'TN':[TN],'SPT':[SPT],'GTC':[GTC],'GD':[GD],'TCH':[TCH],'GT':[GT],'DV':[DV],'VPCT':[VPCT],'LS':[LS]}
+        lines=pd.DataFrame(lines)
         st.dataframe(lines)
         flag = True
     
