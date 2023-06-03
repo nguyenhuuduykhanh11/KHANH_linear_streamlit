@@ -84,7 +84,7 @@ elif choice == 'Sử dụng mô hình để dự báo':
             # st.write(lines.columns)
             flag = True       
     if type=="Input":        
-        giatri = st.number_input('Insert giatri')
+        git = st.number_input('Insert giatri')
         DT = st.number_input('Insert DT')
         TN = st.number_input('Insert TN')
         SPT = st.number_input('Insert SPT')
@@ -95,7 +95,7 @@ elif choice == 'Sử dụng mô hình để dự báo':
         DV = st.number_input('Insert DV')
         VPCT = st.number_input('Insert VPCT')
         LS = st.number_input('Insert LS')
-        email={'giatri':giatri,	'DT':DT, 'TN':TN, 'SPT':SPT,	'GTC':GTC,	'GD':GD,	'TCH':TCH,	'GT':GT,	'DV':DV,	'VPCT':VPCT,	'LS':LS}
+        email={'giatri':git,	'DT':DT, 'TN':TN, 'SPT':SPT,	'GTC':GTC,	'GD':GD,	'TCH':TCH,	'GT':GT,	'DV':DV,	'VPCT':VPCT,	'LS':LS}
         if email!="":
             lines = pd.DataFrame(email)
             flag = True
