@@ -10,15 +10,15 @@ import streamlit as st
 df = pd.read_csv("credit access.csv", encoding='latin-1')
 
 st.title("Hồi quy tuyến tính")
-st.write("## Dự báo khả năng tiếp cận tín dụng")
+st.write("## Dự báo giá trị vay vốn của nông hộ")
 
 uploaded_file = st.file_uploader("Choose a file", type=['csv'])
 if uploaded_file is not None:
     df = pd.read_csv(uploaded_file, encoding='latin-1')
-    df.to_csv("spam_new.csv", index = False)
+    df.to_csv("data.csv", index = False)
 
-X = df.drop(columns=['y'])
-y = df['y']
+X = df.drop(columns=['giatri'])
+y = df['giatri']
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state= 12)
 
@@ -44,10 +44,11 @@ choice = st.sidebar.selectbox('Danh mục tính năng', menu)
 if choice == 'Mục tiêu của mô hình':    
     st.subheader("Mục tiêu của mô hình")
     st.write("""
-    ###### Mô hình được xây dựng để dự báo khả năng tiếp cận vốn tín dụng thông qua giá trị khoản vay, lãi suất, đặc điểm chủ hộ.
+    ###### Mô hình được xây dựng để dự báo giá trị vay vốn của nông hộ dựa trên các biến đặc điểm chủ hộ, điều kiện của nông hộ.
     """)  
     st.write("""###### Mô hình sử dụng thuật toán LinearRegression""")
-    st.image("ham_spam.jpg")
+    st.image("LSM.png")
+    st.image("LSM_1.png")
 
 elif choice == 'Xây dựng mô hình':
     st.subheader("Xây dựng mô hình")
