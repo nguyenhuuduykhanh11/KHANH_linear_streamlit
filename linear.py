@@ -95,9 +95,9 @@ elif choice == 'Sử dụng mô hình để dự báo':
         DV = st.number_input('Insert DV')
         VPCT = st.number_input('Insert VPCT')
         LS = st.number_input('Insert LS')
-        email={'giatri':git,'DT':DT,'TN':TN,'SPT':SPT,'GTC':GTC,'GD':GD,'TCH':TCH,'GT':GT,'DV':DV,'VPCT':VPCT,'LS':LS}
-        if email!="":
-            lines = pd.DataFrame(email)
+        lines={'giatri':git,'DT':DT,'TN':TN,'SPT':SPT,'GTC':GTC,'GD':GD,'TCH':TCH,'GT':GT,'DV':DV,'VPCT':VPCT,'LS':LS}
+        if lines!="":
+            st.dataframe(lines)
             flag = True
     
     if flag:
