@@ -8,7 +8,7 @@ from sklearn.metrics import mean_squared_error, mean_absolute_error
 import streamlit as st
 
 df = pd.read_csv("credit access.csv", encoding='latin-1')
-
+st.image("Logo Agribank 2014.png")
 st.title("Hồi quy tuyến tính")
 st.write("## Dự báo giá trị vay vốn của hộ gia đình - Nhóm 2")
 
